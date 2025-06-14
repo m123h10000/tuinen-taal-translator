@@ -1,7 +1,7 @@
 function translateText() {
   const map = {
-    a: 'o', b: 'p', c: 'k', d: 't', e: 'u', f: 'v',
-    g: 'k', h: 'h', i: 'y', j: 'd', k: 'g', l: 'r',
+    a: 'o', b: 'p', c: 'k', d: 'td', e: 'u', f: 'v',
+    g: 'k', h: 'h', i: 'y', j: 'd', k: 'gc', l: 'r',
     m: 'n', n: 'm', o: 'a', p: 'b', q: 'q', r: 'l',
     s: 'z', t: 'd', u: 'e', v: 'f', w: 'v', x: 'x',
     y: 'i', z: 's'
