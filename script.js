@@ -25,10 +25,12 @@ function translateText() {
 
 function translateMushmellow() {
   const mushMap = {
-    a: 'UGH UGH, WRONGGGG', b: 'v', c: 'x', d: 's', e: 'w', f: 'd',
-    g: 'f', h: 'g', i: 'u', j: 'h', k: 'j', l: 'k', m: 'n', n: 'b',
-    o: 'i', p: 'o', q: 'ALSO WRONNGGG', r: 'e', s: 'a', t: 'r',
-    u: 'y', v: 'c', w: 'q', x: 'z', y: 't', z: 'WHY KEEP WRONG'
+    a: 'UGH UGH, WRONGGGG',
+    b: 'v', c: 'x', d: 's', e: 'w', f: 'd',
+    g: 'f', h: 'g', i: 'u', j: 'h', k: 'j', l: 'k',
+    m: 'n', n: 'b', o: 'i', p: 'o', q: 'ALSO WRONNGGG',
+    r: 'e', s: 'a', t: 'r', u: 'y', v: 'c', w: 'q',
+    x: 'z', y: 't', z: 'WHY KEEP WRONG'
   };
 
   const input = document.getElementById('mushmellowText').value;
@@ -38,18 +40,17 @@ function translateMushmellow() {
     const lower = char.toLowerCase();
 
     if (mushMap.hasOwnProperty(lower)) {
-      let translated = mushMap[lower];
-      
-      // If char is uppercase AND translated is a single letter, convert it to uppercase
+      const translated = mushMap[lower];
       if (char === char.toUpperCase() && translated.length === 1) {
         output += translated.toUpperCase();
       } else {
         output += translated;
       }
     } else {
-      output += char; // preserve spaces, punctuation, etc.
+      output += char;
     }
   }
 
   document.getElementById('mushmellowOutput').innerText = output;
 }
+
