@@ -31,18 +31,23 @@ function translateMushmellow() {
     u: 'y', v: 'c', w: 'q', x: 'z', y: 't', z: 'WHY KEEP WRONG'
   };
 
-  let input = document.getElementById('mushmellowText').value;
+  const input = document.getElementById('mushmellowText').value;
   let output = '';
 
   for (let char of input) {
-    let lower = char.toLowerCase();
+    const lower = char.toLowerCase();
+
     if (mushMap.hasOwnProperty(lower)) {
       let translated = mushMap[lower];
-      output += (char === char.toUpperCase() && typeof translated === "string")
-        ? translated.toUpperCase()
-        : translated;
+      
+      // If char is uppercase AND translated is a single letter, convert it to uppercase
+      if (char === char.toUpperCase() && translated.length === 1) {
+        output += translated.toUpperCase();
+      } else {
+        output += translated;
+      }
     } else {
-      output += char;
+      output += char; // preserve spaces, punctuation, etc.
     }
   }
 
