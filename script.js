@@ -30,7 +30,12 @@ function translateMushmellow() {
     g: 'f', h: 'g', i: 'u', j: 'h', k: 'j', l: 'k',
     m: 'n', n: 'b', o: 'i', p: 'o', q: 'ALSO WRONNGGG',
     r: 'e', s: 'a', t: 'r', u: 'y', v: 'c', w: 'q',
-    x: 'z', y: 't', z: 'WHY KEEP WRONG'
+    x: 'z', y: 't', z: 'WHY KEEP WRONG',
+
+    // special punctuation overrides
+    '[': 'p',
+    ';': 'l',
+    ',': 'm'
   };
 
   const input = document.getElementById('mushmellowText').value;
@@ -53,4 +58,3 @@ function translateMushmellow() {
 
   document.getElementById('mushmellowOutput').innerText = output;
 }
-
